@@ -1,14 +1,14 @@
 applications:
 - name: firehose-to-syslog
 env:
-  API_ENDPOINT: https://api.bosh-lite.com
+  API_ENDPOINT: https://api.api-azure.pcflab.net
   DEBUG: false
-  DOPPLER_ENDPOINT: wss://doppler.bosh-lite.com:443
+  DOPPLER_ENDPOINT: wss://doppler.api-azure.pcflab.net:443
   EVENTS: LogMessage,ValueMetric,Error,ContainerMetric
-  FIREHOSE_USER: admin
-  FIREHOSE_PASSWORD: admin
+  FIREHOSE_USER: firehoseuser
+  FIREHOSE_PASSWORD: firehosepasswd
   FIREHOSE_SUBSCRIPTION_ID: firehose-a
   LOG_EVENT_TOTALS: true
   LOG_EVENT_TOTALS_TIME: 10s
   SKIP_SSL_VALIDATION: true
-  SYSLOG_ENDPOINT: 10.0.0.218:5514
+  SYSLOG_ENDPOINT: 192.168.100.5:514

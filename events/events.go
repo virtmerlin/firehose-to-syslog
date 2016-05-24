@@ -228,6 +228,9 @@ func ValueMetric(msg *events.Envelope) Event {
 		"name":   valMetric.GetName(),
 		"unit":   valMetric.GetUnit(),
 		"value":  valMetric.GetValue(),
+		"deployment":  msg.GetDeployment(),
+		"job":  msg.GetJob(),
+		"index":  msg.GetIndex(),
 	}
 
 	return Event{
